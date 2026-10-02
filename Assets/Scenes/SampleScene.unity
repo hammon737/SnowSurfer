@@ -609,7 +609,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -650,7 +650,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402823693}
   serializedVersion: 8
-  lengthInSec: 0.5
+  lengthInSec: 0.3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -778,7 +778,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 50
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -896,7 +896,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1273,7 +1273,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 0
     angle: 50
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1360,7 +1360,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 3
       mode: 0
       spread: 0
       speed:
@@ -5373,12 +5373,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402823693}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -287, y: -16, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 1.21, y: 2.39, z: 0}
+  m_LocalScale: {x: 0.3814028, y: 0.38140282, z: 0.38140282}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2085187647}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1488186925
 GameObject:
@@ -7487,7 +7487,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 5
       mode: 0
       spread: 0
       speed:
@@ -11500,8 +11500,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022581115}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 795.4, y: 72.3, z: -0}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 795.4, y: 72.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11569,6 +11569,7 @@ Transform:
   m_LocalScale: {x: 2.6219, y: 2.6219, z: 2.6219}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1402823696}
   - {fileID: 1772861703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11635,6 +11636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrashDetector
   restartDelay: 1
+  crashParticles: {fileID: 1402823695}
 --- !u!58 &2085187651
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11792,4 +11794,3 @@ SceneRoots:
   - {fileID: 2085187647}
   - {fileID: 430884791}
   - {fileID: 2022581118}
-  - {fileID: 1402823696}

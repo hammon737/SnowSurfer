@@ -11,7 +11,6 @@ public class FinishLine : MonoBehaviour
 
         if (collision.gameObject.layer == layerIndex)
         {
-            hitEffect.transform.position = transform.position;
             hitEffect.Play();
             Invoke("ReloadScene", restartDelay);
         }
