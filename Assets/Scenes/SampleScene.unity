@@ -3389,13 +3389,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754002176}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.090034604, w: 0.9959387}
-  m_LocalPosition: {x: 74.232605, y: 11.7014675, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 74.94, y: 11.26, z: 0}
   m_LocalScale: {x: 1.4616059, y: 0.79237545, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 963635922}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760733771
 GameObject:
   m_ObjectHideFlags: 0
@@ -22544,7 +22544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217c833b0d3e45d43ba29ebf114aaef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  torqueAmount: 12
+  torqueAmount: 15
   baseSpeed: 33
   boostSpeed: 40
 --- !u!114 &2085187650
