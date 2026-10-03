@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D myRigidody2D;
     SurfaceEffector2D surfaceEffector2D;
     Vector2 moveVector;
+    bool canControlPlayer = true;
 
     void Start()
     {
@@ -20,8 +21,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        RotatePlayer();
-        BoostPlayer();
+        if (canControlPlayer)
+        {
+            RotatePlayer();
+            BoostPlayer();
+        }
 
     }
 
@@ -48,5 +52,9 @@ public class PlayerController : MonoBehaviour
         {
             surfaceEffector2D.speed = baseSpeed;
         }
+    }
+    public void DisableControls()
+    {
+        canControlPlayer = false;
     }
 }
