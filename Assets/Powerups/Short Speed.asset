@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c106de77249d24b9dfc44d661c3448, type: 3}
   m_Name: Short Speed
   m_EditorClassIdentifier: Assembly-CSharp::PowerupSO
-  powerupType: Speed
+  powerupType: speed
   valueChange: 10
   time: 2

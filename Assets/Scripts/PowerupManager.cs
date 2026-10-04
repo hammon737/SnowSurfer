@@ -6,17 +6,44 @@ public class PowerupManager : MonoBehaviour
 
     PlayerController player;
 
+    SpriteRenderer spriteRenderer;
+    float timeLeft;
+
     void Start()
     {
         player = FindAnyObjectByType<PlayerController>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        timeLeft = powerup.GetTime();
+    }
+
+    void Update()
+    {
+        CountdownTimer();
+    }
+    void CountdownTimer()
+    { 
+        if (spriteRenderer.enabled == false)
+        {
+            if (timeLeft > 0)
+            {
+                timeLeft -= Time.deltaTime;
+                if (timeLeft <= 0)
+                {
+                    print("Time's up!");
+                    player.DeactivatePowerup(powerup);
+                }
+            }
+        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         int layerIndex = LayerMask.NameToLayer("Player");
 
-        if (collision.gameObject.layer == layerIndex)
+        if (collision.gameObject.layer == layerIndex && spriteRenderer.enabled == true)
         {
+            spriteRenderer.enabled = false;
             player.ActivatePowerup(powerup);
         }
     }
