@@ -59,10 +59,6 @@ public class PlayerController : MonoBehaviour
             surfaceEffector2D.speed = baseSpeed;
         }
     }
-    public void DisableControls()
-    {
-        canControlPlayer = false;
-    }
 
     void CalculateFlips()
     {
@@ -78,4 +74,24 @@ public class PlayerController : MonoBehaviour
 
         previousRotation = currentRotation;
     }
+
+    public void DisableControls()
+    {
+        canControlPlayer = false;
+    }
+
+    public void ActivatePowerup(PowerupSO powerup)
+    {
+        if (powerup.GetPowerupType() == "speed")
+        {
+            baseSpeed += powerup.GetValueChange();
+            boostSpeed += powerup.GetValueChange();
+        }
+
+        if (powerup.GetPowerupType() == "torque")
+        {
+            torqueAmount += powerup.GetValueChange();
+        }
+    }
+
 }
