@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TMP_Text scoreText;
 
     int score = 0;
     

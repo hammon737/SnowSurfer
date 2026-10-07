@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
         totalRotation += Mathf.DeltaAngle(previousRotation, currentRotation);
 
-        if (totalRotation > 340 || totalRotation < -340)
+        if (totalRotation > 330 || totalRotation < -330)
         {
             totalRotation = 0;
             scoreManager.AddScore(100);
