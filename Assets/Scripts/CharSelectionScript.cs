@@ -8,6 +8,7 @@ public class CharSelectionScript : MonoBehaviour
     void Start()
     {
         Time.timeScale = 0;
+        scoreCanvas.SetActive(false);
     }
 
     void BeginGame()

@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     InputAction moveAction;
     Rigidbody2D myRigidody2D;
     SurfaceEffector2D surfaceEffector2D;
-    ScoreManager scoreManager;
+    [SerializeField]ScoreManager scoreManager;
 
     Vector2 moveVector;
     bool canControlPlayer = true;
@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
         moveAction = InputSystem.actions.FindAction("Move");
         myRigidody2D = GetComponent<Rigidbody2D>();
         surfaceEffector2D = FindAnyObjectByType<SurfaceEffector2D>();
-        scoreManager = FindAnyObjectByType<ScoreManager>();
     }
 
     void Update()
